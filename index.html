@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FiverrHomePage</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">
+                <img src="/images/logo.svg" alt="Fiverr Logo">
+            </a>
+
+            <ul class="menu-links">
+                <span id="close-btn"><i class="ri-close-line"></i></span>
+                <li><a href="#">Fiverr Business</a></li>
+                <li><a href="#">Explore</a></li>
+                <li class="lang">
+                        <a href="#">
+                        <i class="ri-global-line language"></i> 
+                        English
+                        </a>
+                </li>
+                <li><a href="#">Become a Seller</a></li>
+                <li><a href="#">Sign In</a></li>
+                <li class="join-btn"><a href="#">Join Us</a></li>
+            </ul>
+            <span id="btn"><i class="ri-menu-line"></i></span>
+        </nav>
+    </header>
+
+
+    <section class="hero-section">
+        <div class="content">
+            <h1>Find the right freelance service, right away</h1>
+            <form action="#" class="search-form">
+                <input type="text" placeholder="Search for any service...." required>
+                <button type="submit"><i class="ri-search-line"></i></button>
+            </form>
+            <div class="popular-tag">
+                Popular:
+                <ul class="tags">
+                    <li><a href="#">Website Design</a></li>
+                    <li><a href="#">Logo Design</a></li>
+                    <li><a href="#">WordPress</a></li>
+                    <li><a href="#">AI Design</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        const Header=document.querySelector("header");
+        const Btn=document.querySelector("#btn");
+        const close=document.querySelector("#close-btn");
+
+        Btn.addEventListener("click",()=>{
+            Header.classList.toggle("show-menu");
+        });
+
+        close.addEventListener("click",()=>{
+            Header.classList.remove("show-menu");
+        });
+    </script>
+</body>
+</html>
